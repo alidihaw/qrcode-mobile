@@ -1,0 +1,38 @@
+ion-content.bg-white {
+  background: $white !important;
+}
+
+.sidebar {
+  font-size: 14px;
+  border: 0;
+  width: 100%;
+
+  .operator {
+    margin-top: 25px;
+    color: $grey-800;
+  }
+
+  .address {
+    color: $grey-600;
+    margin-top: 5px;
+    font-size: 13px;
+  }
+
+  .logo {
+    background-image: url("../assets/images/sidebar/sidebar.jpg");
+    padding: 30px 18px 10px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+
+    img {
+      width: 130px;
+    }
+  }
+}
+
+ion-list.sidemenu {
+  button {
+    font-size: 14px !important;
+  }
+}

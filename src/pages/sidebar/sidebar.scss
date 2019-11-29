@@ -1,0 +1,44 @@
+page-sidebar {}
+
+.sidemenu {
+  button {
+    color: #525252 !important;
+
+    ion-icon {
+      font-size: 14px;
+      margin-right: 10px;
+    }
+  }
+}
+
+ion-tabs ion-navbar-section {
+  display: none;
+}
+
+.logo {margin: 0 auto; text-align:center;
+  img {
+    width: 100px !important;
+    
+  }
+
+  .title {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #888;
+    margin-left: 5px;
+
+    span {
+      color: $primary;
+    }
+  }
+  .sub-title {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888;
+    margin-left: 5px;
+
+    span {
+      color: $primary;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<ion-menu id="Menu" [content]="content">
+  <ion-content class="bg-white">
+    <div class="sidebar">
+      <div class="logo" *ngFor="let website of (websites | async)">
+        <img [src]="website.website_logo.downloadURL" />
+        <div class="title">
+          {{ website.website_name }}
+        </div>
+        <div class="sub-title">
+          {{ website.website_description | titlecase }}
+        </div>
+      </div>
+      <ion-list class="sidemenu">
+        <button ion-item (click)="tutorial()">
+          <ion-icon name="book"></ion-icon> Panduan Penggunaan
+        </button>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

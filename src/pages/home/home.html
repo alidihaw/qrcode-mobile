@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngFor="let website of (websites | async)">{{ website.website_name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <button *ngIf="!ScannedCode" ion-button full icon-left (click)="scanCode()" color="secondary"><ion-icon name="qr-scanner"></ion-icon> Scan Barcode</button>
+  <ion-card>
+    <ion-card-content *ngIf="ScannedCode">   
+      <div class="barcodeid">Barcode Id</div> 
+      <div class="barcodeid2">{{ ScannedCode }}</div> 
+    </ion-card-content>
+  </ion-card>
+  <button *ngIf="ScannedCode" class="divider" ion-button full (click)="save()" color="primary">Simpan</button>
+  <button *ngIf="ScannedCode" class="divider" ion-button full (click)="cancel()" color="secondary"> Batal</button>
+</ion-content>
